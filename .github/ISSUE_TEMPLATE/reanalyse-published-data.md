@@ -1,11 +1,8 @@
----
-name: Reanalyse published data
-about: Provide parameters for reanalysis of published data
-title: Reanalyse published data
-labels: ''
-assignees: ''
-
----
+name:        Reanalyse published data
+description: Provide parameters for reanalysis of published data
+title:       Reanalyse published data
+labels:      'reanalysis'
+assignees:   ''
 
 - type: input
   id: doi
