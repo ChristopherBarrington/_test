@@ -28,11 +28,12 @@ body:
     attributes:
       label: UDG treatment
       description: UDG treatment applied to the library preparations
+      default: 3
       options:
-        - unknown
-        - full
-        - half
         - untreated
+        - half
+        - full
+        - unknown
     validations:
       required: true
 
@@ -41,10 +42,11 @@ body:
     attributes:
       label: Strandedness
       description: Strandedness of the library preparations
+      default: 2
       options:
-        - unknown
-        - double
         - single
+        - double
+        - unknown
     validations:
       required: true
 
@@ -56,16 +58,16 @@ body:
   #   validations:
   #     required: true
 
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority/Resource request
-      description: Priority level for the reanalysis request
-      default: 1
-      options:
-        - low
-        - standard
-        - high
+  # - type: dropdown
+  #   id: priority
+  #   attributes:
+  #     label: Priority/Resource request
+  #     description: Priority level for the reanalysis request
+  #     default: 1
+  #     options:
+  #       - low
+  #       - standard
+  #       - high
 
   - type: textarea
     id: user_provided_notes
