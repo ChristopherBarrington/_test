@@ -12,6 +12,7 @@ body:
       placeholder: e.g., 10.1234/example
     validations:
       required: true
+      pattern: '^\d{2}\.\d{4,}/.*'
 
   - type: input
     id: analysis_title
@@ -47,6 +48,23 @@ body:
     validations:
       required: true
 
+  - type: input
+    id: data_location
+    attributes:
+      label: Data location/accession
+      placeholder: e.g., SRA accession number, local path
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority/Resource request
+      options:
+        - standard
+        - high-priority
+        - compute-intensive
+
   - type: textarea
     id: user_provided_notes
     attributes:
@@ -54,3 +72,7 @@ body:
       placeholder: Enter any additional notes or context
       description: Free text field for user-supplied notes (supports markdown)
 
+  - type: input
+    id: contact_email
+    attributes:
+      label: Notification email
