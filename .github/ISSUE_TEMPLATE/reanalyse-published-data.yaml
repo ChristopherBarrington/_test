@@ -61,7 +61,7 @@ body:
     attributes:
       label: Priority/Resource request
       description: Priority level for the reanalysis request
-      default: standard
+      default: 2
       options:
         - low
         - standard
