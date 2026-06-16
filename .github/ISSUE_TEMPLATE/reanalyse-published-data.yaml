@@ -25,7 +25,7 @@ body:
     id: udg_treatment
     attributes:
       label: UDG treatment
-      description: The UDG treatment applied to the library preparations
+      description: UDG treatment applied to the library preparations
       options:
         - unknown
         - full
@@ -38,7 +38,7 @@ body:
     id: strandedness
     attributes:
       label: Strandedness
-      description: The strandedness of the library preparations
+      description: Strandedness of the library preparations
       options:
         - unknown
         - double
