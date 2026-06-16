@@ -1,8 +1,8 @@
-name:        Reanalyse published data
+name: Reanalyse published data
 description: Provide parameters for reanalysis of published data
-title:       Reanalyse published data
-labels:      ['reanalysis']
-assignees:   ['']
+title: Reanalyse published data
+labels: ['reanalysis']
+assignees: ['']
 
 body:
   - type: input
