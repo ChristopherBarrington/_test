@@ -1,15 +1,25 @@
-name: Reanalyse published data
-description: Provide parameters for reanalysis of published data
+name: 🔬 Reanalyse published data
+description: Request reanalysis of published data with specific parameters
 title: Reanalyse published data
 labels: ['reanalysis']
 assignees: ['']
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        # 🧬 Data Reanalysis Request
+        
+        Thank you for requesting a reanalysis of published data! Please provide the details below to help us process your request efficiently.
+        
+        ---
+
   - type: input
     id: doi
     attributes:
-      label: DOI
+      label: 📄 DOI
       placeholder: e.g., 10.1234/example
+      description: Digital Object Identifier of the published data to reanalyse
     validations:
       required: true
       pattern: '^\d{2}\.\d{4,}/.*'
@@ -17,17 +27,27 @@ body:
   - type: input
     id: analysis_title
     attributes:
-      label: Analysis title
-      description: A name for the analysis to use on Nemo
+      label: 🎯 Analysis title
+      description: A descriptive name for this reanalysis (used on Nemo for tracking)
       placeholder: Enter the title of the analysis
     validations:
       required: true
 
+  - type: markdown
+    attributes:
+      value: |
+        ## 🛠️ Analysis Parameters
+
   - type: dropdown
     id: udg_treatment
     attributes:
-      label: UDG treatment
-      description: UDG treatment applied to the library preparations
+      label: 🧫 UDG treatment
+      description: |
+        UDG (uracil-DNA glycosylase) treatment applied during library preparation
+        - **untreated**: No UDG treatment
+        - **half**: Half UDG treatment
+        - **full**: Full UDG treatment
+        - **unknown**: Not specified
       default: 3
       options:
         - untreated
@@ -40,8 +60,12 @@ body:
   - type: dropdown
     id: strandedness
     attributes:
-      label: Strandedness
-      description: Strandedness of the library preparations
+      label: 🧵 Strandedness
+      description: |
+        Library preparation strandedness:
+        - **single**: Single-stranded
+        - **double**: Double-stranded
+        - **unknown**: Not specified
       default: 2
       options:
         - single
@@ -69,15 +93,23 @@ body:
   #       - standard
   #       - high
 
+  - type: markdown
+    attributes:
+      value: |
+        ## 📝 Additional Information
+
   - type: textarea
     id: user_provided_notes
     attributes:
-      label: Notes
-      placeholder: Enter any additional notes or context
-      description: Free text field for user-supplied notes (supports markdown)
+      label: 📌 Notes
+      placeholder: |
+        Add any relevant context, methodological details, or special requirements.
+        This field supports **markdown** formatting.
+      description: Free text field for additional context or notes
 
   - type: input
     id: contact_email
     attributes:
-      label: Notification email
-      description: Email address to receive notifications about the reanalysis request
+      label: 📧 Notification email
+      placeholder: your.email@example.com
+      description: Email address to receive updates about this reanalysis request
