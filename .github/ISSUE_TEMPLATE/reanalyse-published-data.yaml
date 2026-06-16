@@ -28,7 +28,7 @@ body:
       options:
         - full
         - half
-        - none
+        - untreated
     validations:
       required: true
 
