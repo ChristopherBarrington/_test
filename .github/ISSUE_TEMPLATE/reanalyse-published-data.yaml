@@ -26,6 +26,7 @@ body:
     attributes:
       label: UDG treatment
       options:
+        - unknown
         - full
         - half
         - untreated
@@ -37,7 +38,16 @@ body:
     attributes:
       label: Strandedness
       options:
+        - unknown
         - double
         - single
     validations:
       required: true
+
+  - type: textarea
+    id: user_provided_notes
+    attributes:
+      label: Notes
+      placeholder: Enter any additional notes or context
+      description: Free text field for user-supplied notes (supports markdown)
+
