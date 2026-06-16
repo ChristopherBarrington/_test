@@ -17,6 +17,7 @@ body:
     id: analysis_title
     attributes:
       label: Analysis title
+      description: A name for the analysis to use on Nemo
       placeholder: Enter the title of the analysis
     validations:
       required: true
